@@ -3,3 +3,10 @@ stage 'Checkout'
         deleteDir()
         checkout scm
     }
+
+stage 'Build'
+    node {
+        script {
+            pipeline\pipeline1.groovy
+        }
+    }
