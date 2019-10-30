@@ -5,7 +5,7 @@ stage 'Checkout'
     }
 
 stage 'Build'
-    Wks = "${WORKSPACE}"
+    Wks = "${env.WORKSPACE}"
     node {
         echo Wks
     }
