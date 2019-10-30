@@ -1,9 +1,9 @@
 pipeline {
-    agent none
+    agent any
     stages { 
         stage('Build') {
             steps {
-                echo "${WORKSPACE}"
+                evaluate(new File("${WORKSPACE}/pipeline/pipeline1.groovy"))
             }
         }
     }
