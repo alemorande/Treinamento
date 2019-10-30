@@ -5,6 +5,7 @@ stage 'Checkout'
     }
 
 stage 'Build'
+    Wks = '${WORSKPACE}'
     node {
-        echo ${WORSKPACE}
+        echo Wks
     }
