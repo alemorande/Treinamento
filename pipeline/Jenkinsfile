@@ -6,7 +6,5 @@ stage 'Checkout'
 
 stage 'Build'
     node {
-        script {
-            pipeline\pipeline1.groovy
-        }
+        evaluate(new File('pipeline\pipeline1.groovy'))
     }
