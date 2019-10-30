@@ -1,12 +1,12 @@
 pipeline {
     agent any
     stages { 
-        stage 'Checkout' {
+        stage('Checkout') {
             deleteDir()
             checkout scm
         }
 
-        stage 'Build' {
+        stage('Build') {
             Wks = "${WORKSPACE}"
             echo Wks
         }
