@@ -1,3 +1,5 @@
+agent any
+
 stage 'Checkout'
     node {
         deleteDir()
