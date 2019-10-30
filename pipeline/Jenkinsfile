@@ -1,5 +1,5 @@
 stage 'Checkout'
     node {
         deleteDir()
-        stash name: "pipeline", includes: "pipeline/*.*"
+        stash name: "pipeline", includes: "pipeline/*"
     }
