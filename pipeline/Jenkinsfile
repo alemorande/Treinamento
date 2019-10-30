@@ -3,10 +3,3 @@ stage 'Checkout'
         deleteDir()
         checkout scm
     }
-
-stage 'Build'
-    node {
-        script {
-            // Script
-        }
-    }
