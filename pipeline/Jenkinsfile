@@ -7,6 +7,6 @@ stage 'Checkout'
 stage 'Build'
     node {
         script {
-            pipeline/pipeline1.groovy
+            // Script
         }
     }
