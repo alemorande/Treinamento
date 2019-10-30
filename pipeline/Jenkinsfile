@@ -10,8 +10,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                Wks = "${WORKSPACE}"
-                echo Wks
+                echo "${WORKSPACE}"
             }
         }
     }
