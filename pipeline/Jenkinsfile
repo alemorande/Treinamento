@@ -6,5 +6,5 @@ stage 'Checkout'
 
 stage 'Build'
     node {
-        evaluate(new File('..pipeline/pipeline1.groovy'))
+        evaluate(new File('${WORSKPACE}/pipeline/pipeline1.groovy'))
     }
