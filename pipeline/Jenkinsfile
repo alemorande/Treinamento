@@ -1,13 +1,16 @@
-agent any
+pipeline {
+    agent any
+    stages { 
+        stage 'Checkout'
+            node {
+                deleteDir()
+                checkout scm
+            }
 
-stage 'Checkout'
-    node {
-        deleteDir()
-        checkout scm
+        stage 'Build'
+            Wks = "${WORKSPACE}"
+            node {
+                echo Wks
+            }
     }
-
-stage 'Build'
-    Wks = "${WORKSPACE}"
-    node {
-        echo Wks
-    }
+}
