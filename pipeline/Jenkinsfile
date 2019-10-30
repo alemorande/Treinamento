@@ -1,12 +1,12 @@
 stage 'Checkout'
     node {
         deleteDir()
-        checkout scm extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'pipeline']]
+        checkout scm
     }
 
 stage 'Build'
     node {
         script {
-            pipeline1.groovy
+            pipeline/pipeline1.groovy
         }
     }
