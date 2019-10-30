@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 evaluate(new File("${WORKSPACE}/pipeline/pipeline1.groovy"))
+                echo "Voltou da execucao."
             }
         }
     }
