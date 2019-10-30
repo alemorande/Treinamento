@@ -1,5 +1,12 @@
 stage 'Checkout'
     node {
         deleteDir()
-        stash name: "pipeline", includes: "pipeline/*"
+        checkout scm extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'pipeline']]
+    }
+
+stage 'Build'
+    node {
+        script {
+            pipeline/pipeline1.groovy
+        }
     }
