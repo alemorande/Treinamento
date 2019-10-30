@@ -7,5 +7,4 @@ stage 'Checkout'
 stage 'Build'
     node {
         echo ${WORSKPACE}
-        evaluate(new File(${WORSKPACE}+'/pipeline/pipeline1.groovy'))
     }
