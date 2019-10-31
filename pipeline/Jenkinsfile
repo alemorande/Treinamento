@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages { 
-        stage('Iniciando Construção') {
+        stage('Iniciando Construcao') {
             steps {
                 evaluate(new File("${WORKSPACE}/pipeline/pipeline1.groovy"))
             }
