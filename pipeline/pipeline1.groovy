@@ -4,8 +4,11 @@ if (params.Continuar != 'Sim') {
 	node {
 		def String[] var_arquivarEstag = ['Estagio 1.txt','Estagio 2.txt','Estagio 2.1.txt','Estagio 2.2.txt','Estagio 2.3.txt','Estagio 3.txt']
         def nomeEstagio = ''
-		def seqEstagio = seqEstagio++
-		def seqSubEstagio = seqSubEstagio++
+		def seqEstagio = 0
+		def seqSubEstagio = 0
+		
+		seqEstagio++
+		seqSubEstagio++
 
         ansiColor('xterm') {
             try {
