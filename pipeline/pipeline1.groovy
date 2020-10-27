@@ -9,13 +9,13 @@ if (params.Continuar != 'Sim') {
             try {
                 nomeEstagio = 'Estagio ' + seqEstagio++
                 stage(nomeEstagio) {
-                    echo 'Iniciando ' + nomeEstagio
+                    echo '\033[1;33mIniciando \033[0m' + nomeEstagio
                     writeFile file:nomeEstagio + '.txt', text:nomeEstagio, encoding:'UTF-8'
-                    echo nomeEstagio + ' Concluido'
+                    echo nomeEstagio + '\033[1;32m Concluido\033[0m'
                 }
                 nomeEstagio = 'Estagio ' + seqEstagio++
                 stage(nomeEstagio) {
-                    echo 'Iniciando ' + nomeEstagio
+                    echo '\033[1;33mIniciando \033[0m' + nomeEstagio
                     writeFile file:nomeEstagio + '.txt', text:nomeEstagio, encoding:'UTF-8'
                     parallel (
                         (nomeEstagio + '.1'): {
@@ -26,13 +26,13 @@ if (params.Continuar != 'Sim') {
                             writeFile file:nomeEstagio + '.3.txt', text:nomeEstagio + '.3', encoding:'UTF-8'
                         }
                     )
-                    echo nomeEstagio + ' Concluido'
+                    echo nomeEstagio + '\033[1;32m Concluido\033[0m'
                 }
                 nomeEstagio = 'Estagio ' + seqEstagio++
                 stage(nomeEstagio) {
-                    echo 'Iniciando ' + nomeEstagio
+                    echo '\033[1;33mIniciando \033[0m' + nomeEstagio
                     writeFile file:nomeEstagio + '.txt', text:nomeEstagio, encoding:'UTF-8'
-                    echo nomeEstagio + ' Concluido'
+                    echo nomeEstagio + '\033[1;32m Concluido\033[0m'
                 }
             } catch (error) {
                 echo '\n\n\033[1;31m[Erro]\033[0m Erro no ' + nomeEstagio + '\n\n'
